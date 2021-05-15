@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Validate</legend>
+            <input type="text" name="firstname" id="name"> <br>
+            <input type="checkbox" name="checkme" id="checkme"> <br>
+            <input type="submit" name="submit" id="submit"> <br>
+        </fieldset>
+    </form>
+
+    <script>
+        const name = document.getElementById('name');
+        const checkItem = document.getElementById('checkme');
+        const submit = document.getElementById('submit');
+
+        submit.addEventListener('click', e => {
+            if (name.value == '' || checkItem.checked == false) {
+                e.preventDefault();
+            }
+        });
+        
+    </script>
+</body>
+</html>

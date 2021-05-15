@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle class Name</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    div{
+        text-align: center;
+        margin: 50px;
+    }
+    .round{
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <div id="item">
+        Javascript Developer
+    </div>
+    <button id="btn"> Click me</button>
+    <script>
+        const btn = document.getElementById('btn');
+        const item = document.getElementById('item');
+        btn.addEventListener('click', e =>{
+            item.classList.toggle('round');
+        });
+        
+
+    </script>
+</body>
+</html>
